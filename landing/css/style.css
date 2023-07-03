@@ -1,0 +1,612 @@
+@charset "utf-8";
+
+/* =======================共通設定========================= */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 80%;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    overflow: auto;
+}
+
+
+body {
+    line-height: 1.7;
+    color: rgb(60, 60, 60);
+    overflow: hidden;
+    background-color: #ecece7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 7rem;
+    color: rgb(27, 27, 27);
+    letter-spacing: 10px;
+    pointer-events: none;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+
+.wrapper,
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =======================ヘッダー========================= */
+#top {
+    position: relative;
+    margin-top: 3%;
+}
+
+.nabigation {
+    margin: 0 10%;
+}
+
+.headerul {
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+
+.headerul li {
+    margin-left: 36px;
+    text-align: center;
+}
+
+.headerul a {
+    color: rgb(109, 109, 109);
+}
+
+.headerul a:hover {
+    color: #f37601;
+}
+
+/* =======================Works========================= */
+#works {
+    margin-top: 200px;
+    text-align: center;
+    max-width: 1400px;
+}
+
+.works__innner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 100px auto;
+}
+
+.works__item {
+
+    display: block;
+    transition-duration: 0.3s;
+}
+
+.works__item:hover {
+    transform: scale(1.1);
+    /*画像の拡大率*/
+    transition-duration: 0.3s;
+    /*変化に掛かる時間*/
+}
+
+.works__p {
+    padding: 1.5rem 0 6rem 0;
+    width: 75%;
+    margin: auto;
+}
+
+.works__fig {
+    margin-bottom: 70px;
+    overflow: hidden;
+    width: 33%;
+    height: auto;
+    padding: 0 3%;
+}
+
+table {
+    margin-top: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+th {
+    text-align: center;
+    height: 50px;
+    font-size: larger;
+}
+
+td {
+    height: 30px;
+}
+
+/* =======================skills========================= */
+#skills {
+    margin-top: 200px;
+    text-align: left;
+}
+
+.skills-p { 
+    width: 75%;
+    margin: 0 auto;
+    font-size: 3rem;
+}
+	
+.parent {
+ display: flex;
+ margin-bottom: 100px;
+ }
+ 
+.child {
+    margin-top: 100px;
+ line-height: 100px;
+ width: 50%;
+
+}
+
+.child_p {
+    line-height: normal;
+    margin-right: 50px;
+    border-left:5px solid #000000; /*線の設定*/
+    padding:2px 20px; /*余白の設定*/
+}
+
+.skills-img { 
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.TextRandomAnime {
+    padding: 0;
+    padding-top: 3rem;
+}
+
+
+.skil {
+    display: flex;
+}
+
+.skill__section {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 100px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    color: rgb(209, 84, 46);
+}
+
+
+
+
+
+/* =======================Aboutme========================= */
+
+#aboutme {
+    width: 100%;
+    margin: 0 auto 100px auto;
+    height: 100vh; /* 空の要素なので、高さの定義が必要です。 */
+    background-image: url("../../img/top_02.jpg");
+    background-size: cover;
+}
+
+.aboutme_p {
+    font-size: 5rem;
+    list-style-type: none;
+    display: flex;
+position: absolute;
+left: 4vw;
+line-height: 20vw;
+font-family: 'Oswald', sans-serif;
+}
+
+
+.textbox {
+    text-align: center;
+}
+
+.textbox__p {
+    text-align: left;
+    padding-bottom: 20px;
+    padding-top: 0;
+}
+
+
+.amgrid {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.ambox {
+    margin-right: 3rem;
+    text-align: center;
+
+}
+
+.ambox__p {
+    width: 350px;
+    text-align: center;
+}
+
+.ambox__ps {
+    padding: 0;
+}
+
+.amboximg {
+    width: 250px;
+    height: auto;
+    text-align: center;
+}
+
+
+/* =============↓動くCSS↓=============== */
+
+/*========= レイアウトのためのCSS ===============*/
+p {
+
+    padding: 50px 0;
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+}
+
+#page-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    color: #9f1d9a;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+#page-top a:hover {
+    background: rgb(42, 120, 131);
+}
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0%;
+    transform: translateY(500px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.8s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+/*==================================================
+  ランダムにテキスト出現する
+  ===================================*/
+.TextRandomAnime span {
+    opacity: 0;
+}
+
+.TextRandomAnime.appearRandomtext span {
+    animation: text_randomanime_on .5s ease-out forwards;
+}
+
+@keyframes text_randomanime_on {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.TextRandomAnime.appearRandomtext span:nth-child(2n) {
+    animation-delay: .3s;
+    /* spanのついた2の倍数の文字列の変化を0.5秒遅らせる*/
+}
+
+.TextRandomAnime.appearRandomtext span:nth-child(3n+1) {
+    animation-delay: .15s;
+    /* spanのついた3の倍数＋1の文字列の変化を0.15秒遅らせる*/
+}
+
+
+/* =============↑動くCSS↑=============== */
+
+
+
+
+/* =============↓動くCSS↓=============== */
+
+/*リンクの形状*/
+
+#page-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f37601;
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: all 0.3s;
+}
+
+#page-top a:hover {
+    background: rgb(42, 120, 131);
+}
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0%;
+    transform: translateY(500px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.8s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+
+/* =============↑動くCSS↑=============== */
+
+/* =======================footer========================= */
+footer {
+    position: relative;
+}
+
+.footer__p {
+    font-size: 1.2rem;
+    color: rgb(105, 43, 43);
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    /*コレ*/
+    transform: translate(-50%, -50%);
+    margin: 0;
+    display: inline;
+}
+
+/* =======================tablet版========================= */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 60%;
+    }
+
+    .amgrid {
+        display: block;
+
+    }
+
+    .ambox__p {
+        display: block;
+        margin: auto;
+    }
+
+
+    .strengs__s {
+        text-align: left;
+        width: auto;
+        padding-bottom: 2.5rem;
+    }
+
+    #works {
+        padding: 0;
+    }
+
+    .works__fig {
+        width: 45%;
+    }
+
+
+    .forms {
+        margin: auto;
+        margin-right: 10%;
+    }
+
+    .button{
+        margin-left: 0;
+    }
+
+}
+
+/* =======================スマホ版========================= */
+@media screen and (max-width:415px) {
+    html {
+        font-size: 80%;
+    }
+
+    h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 6rem;
+        letter-spacing: 1px;
+    }
+
+    .headerimg {
+        margin: 0 0 10rem 0;
+    }
+
+    #page-top {
+        display: none;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+        padding-bottom: 2rem;
+        color: rgb(209, 84, 46);
+    }
+
+    .headerul {
+        right: 5%;
+    }
+
+
+    /* =============Aboutme=============== */
+    .amgrid {
+        margin-bottom: 100px;
+    }
+
+    .kao {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    .textbox__p {
+        text-align: center;
+    }
+
+    .amflex {
+        display: block;
+        text-align: center;
+    }
+
+    .ambox {
+        margin: auto;
+    }
+
+    .amboximg {
+        width: 300px;
+        height: auto;
+        text-align: center;
+    }
+
+    /* =============skills=============== */
+    #skills {
+        margin-top: 100px;
+    }
+
+
+
+    /* =============works=============== */
+    #works {
+        margin-top: 100px;
+        padding: 0;
+    }
+
+    .works__innner {
+        display: block;
+        margin: 0 auto;
+
+    }
+
+    .works__fig {
+        width: 100vw;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .works__p {
+        margin: 0;
+    }
+
+    
+
+}
